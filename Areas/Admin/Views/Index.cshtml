@@ -1,0 +1,36 @@
+﻿<div class="adminGamesContainer">
+    <div class=" adminHeaderAndButton">
+        <h1 class="headTitle">Spel</h1>
+      @model IEnumerable<Highscore.Models.Domain.Game> 
+        @Html.ActionLink("Nytt Spel", "New", "Games", new { area = "Admin" }, new { @class = "adminLinkBtn" }))
+
+    </div>
+
+    <div class="adminGamesTableContainer">
+        <table class=" table table-striped" style="color:#fff;" >
+            <thead >
+                <tr>
+                    <th>ID</th>
+                    <th>Namn</th>
+                    <th>År</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var game in Model)
+                {
+                    <tr>
+                        <td>@game.Id</td>
+                        <td>@game.Title</td>
+                        <td>@game.Year</td>
+                    </tr>
+                }
+
+
+
+            </tbody>
+        </table>
+
+    </div>
+    
+
+</div>

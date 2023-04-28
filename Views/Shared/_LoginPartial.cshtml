@@ -1,0 +1,46 @@
+﻿@using Highscore.Models.Domain;
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<ul class="navbar-nav d-flex flex-column logUl">
+@if (SignInManager.IsSignedIn(User))
+{
+    <li class="nav-item d-flex">
+        <a class="nav-link" style="color:#0ac43c;" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hej @User.Identity?.Name !</a>
+    </li>
+        <li class="nav-item d-flex align-items-center headerLink" >
+                <form class="form-inline d-flex align-items-center" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+                <img class="loginImg" src="~/img/logout.png" /><button type="submit" class="nav-link btn" style="color:#0ac43c; font-size:1.05rem;">Logga ut</button>
+                </form>
+        </li>
+        <li class="nav-item d-flex align-items-center headerLink">
+            <a class="nav-link d-flex align-items-center" style="color:#0ac43c; font-size:1.05rem;" href="/highscores/new">
+                <img class="loginImg" src="~/img/newHighScore.png" />
+                Ny Highscore
+            </a>
+        </li>
+}
+else
+{
+        <li class="nav-item d-flex align-items-center headerLink">
+            <a class="nav-link d-flex align-items-center" style="color:#0ac43c; font-size:1.05rem;" asp-area="Identity" asp-page="/Account/Register">
+                <img class="loginImg" src="~/img/register.png" />
+                 Registrera
+            </a>
+    </li>
+        <li class="nav-item d-flex align-items-center headerLink">
+            <a class="nav-link d-flex align-items-center" style="color:#0ac43c; font-size:1.05rem;" asp-area="Identity" asp-page="/Account/Login">
+                <img class="loginImg" src="~/img/login.png" />
+                Logga in
+            </a>
+    </li>
+        <li class="nav-item d-flex align-items-center headerLink">
+            <a class="nav-link d-flex align-items-center" style="color:#0ac43c; font-size:1.05rem;" href="/highscores/new">
+                <img class="loginImg" src="~/img/newHighScore.png" />
+                Ny Highscore
+            </a>
+        </li>
+}
+<li><a href="admin/">admin</a></li>
+</ul>

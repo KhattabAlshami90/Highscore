@@ -1,0 +1,49 @@
+﻿@model Highscore.Models.ViewModels.GameScoresModel
+
+<h1 class="hOne" style="margin-top:1rem;">
+    Leaderboard
+</h1>
+@{
+    if(Model.Scores.Count<=10)
+}
+@if(Model.Scores.Count<=10){
+    @foreach (var highScore in Model.Scores)
+        {
+
+    <div class="highScoreCard">
+        <div class="highscoreCardText">
+            <span class="playerAndDate">
+               @highScore.Player , @highScore.Date
+
+            </span>
+        </div>
+        <span class="cardScore">
+            @highScore.ScoreP
+        </span>
+    </div>
+        }
+    }
+
+@if (Model.Scores.Count > 10)
+{
+    @for (var i=0; i<10; i++)
+    {
+
+        var highScore = Model.Scores[i];
+        <div class="highScoreCard">
+            <div class="highscoreCardText">
+                <span class="playerAndDate">
+                    @highScore.Player , @highScore.Date
+
+                </span>
+            </div>
+            <span class="cardScore">
+                @highScore.ScoreP
+            </span>
+        </div>
+    }
+}
+    
+
+    }
+

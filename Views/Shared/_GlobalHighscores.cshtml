@@ -1,0 +1,30 @@
+﻿@model Highscore.Models.ViewModels.GamesHighscoreModel
+
+@foreach(var highScore in Model.HighScores)
+{
+    
+
+        var urlSlug = Model.Games
+        .Where(p => p.Title == highScore.GameTitle)
+        .Select(p => p.UrlSlug)
+        .FirstOrDefault();
+ 
+    <div class="highScoreCard">
+        <div class="highscoreCardText">
+            <a href="@($"games/{highScore.GameUrlSlug}")" style="color:#22aa22;">
+                <h5 class="display-5">
+                    @highScore.GameTitle
+                </h5>
+            </a>
+            <span class="playerAndDate">
+                @highScore.Player ,  @highScore.Date.ToShortDateString()
+
+
+            </span>
+        </div>
+        <span class="cardScore">
+            @highScore.ScoreP
+        </span>
+    </div>
+    
+}

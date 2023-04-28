@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Highscore.Models.Domain.Game>
+<h1 class="hOne">
+    Registrera highscore
+</h1>
+
+<form method="post">
+    <div class="row g-3 d-flex flex-column">
+        <div class="col-sm-6 frmGrp">
+            <label for="game" class="form-label frmLbl">Spel</label>
+            <select name="game" id="game" class="frmSelect">
+                <option value="" disabled selected>Välj spel</option>
+                @foreach(var game in Model)
+                {
+                    <option value="@game.Title">@game.Title</option>
+                }
+            </select>
+        </div>
+
+        <div class="col-sm-6 frmGrp">
+            <label for="player" class="form-label frmLbl">Spelare</label>
+            <input type="text" class="frmInp" name="player" autocomplete="off" />
+        </div>
+        <div class="col-sm-6 frmGrp">
+            <label for="date" class="form-label frmLbl">Datum</label>
+            <input type="date" class="frmInp" name="date" />
+        </div>
+        <div class="col-sm-6 frmGrp">
+            <label for="scoreP" class="form-label frmLbl">Poäng</label>
+            <input type="number" class="frmInp" name="scoreP" />
+        </div>
+        <button class="primaryBtn" type="submit">Registrera</button>
+    </div>
+
+</form>
