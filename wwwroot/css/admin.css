@@ -1,0 +1,207 @@
+﻿body {
+    background-color: #808080;
+}
+
+header {
+    background-color: #000;
+    margin: 0;
+    margin-top: -1rem;
+    border: solid 1px #00ff21;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border: solid 1px #00ff21;
+    background-color: #232323;
+    width: 30%;
+    height: 600px;
+}
+
+.adminLink {
+    color: #017323;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+    .adminLink:hover {
+        color: #10ff41;
+    }
+
+.headTitle {
+    color: #00ff21;
+    margin: 1rem;
+}
+
+
+.adminGamesContainer {
+    display: inline;
+}
+
+.asideAndContainer {
+    display: flex;
+    gap: 1rem;
+}
+
+.adminGamesContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.adminHeaderAndButton {
+    width: 100%;
+    display: flex;
+    align-items:center;
+}
+
+.adminGamesTableContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*.adminGamesTable tbody tr:nth-child(odd) {
+    background-color: #017323;
+    color:black;
+}
+.adminGamesTable tbody tr:nth-child(even) {
+    background-color: #232323;
+}*/
+.frmLbl {
+    color: #131313;
+    font-size: 1.8em;
+    text-shadow: -3px 3px 5px #0ac43c;
+}
+
+.frmGrp {
+    display: flex;
+    flex-direction: column;
+}
+.frmTextArea {
+    background-color: #232323;
+    color: #0ac43c;
+    font-size: 16px;
+    border: 1px solid #017323;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+.frmInp {
+    width: 40%;
+    background-color: #232323;
+    color: #0ac43c;
+    font-size: 16px;
+    border: 1px solid #017323;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom:1rem;
+}
+
+    .frmInp:hover {
+        outline: none;
+        border-color: #0ac43c;
+        box-shadow: 0 0 5px #017323;
+    }
+
+    .frmInp:focus {
+        outline: none;
+        border: 2px solid #017323;
+    }
+
+.frmSelect {
+    width: 40%;
+    background-color: #232323;
+    color: #0ac43c;
+    font-size: 16px;
+    border: 1px solid #017323;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+    .frmSelect:hover {
+        outline: none;
+        border-color: #0ac43c;
+        box-shadow: 0 0 5px #017323;
+    }
+.primaryBtn {
+    border-radius: 1rem;
+    width: 30%;
+    margin-left: .5rem;
+    transition: 1s;
+    font-size: 1.05rem;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #232323;
+    color: #017323;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+
+    .primaryBtn:hover {
+        color: #10ff41;
+        background-color: #131313;
+        transform: scale(1.05);
+        font-size: 1.1rem;
+    }
+/*.adminLinkBtn {
+    border-radius: 1rem;
+    width:13rem;
+    height:2rem;
+
+    transition: 1s;
+    font-size: 1.05rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: #232323;
+    color: #017323;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+
+    .adminLinkBtn:hover {
+        color: #10ff41;
+        background-color: #131313;
+        transform: scale(1.05);
+        font-size: 1.1rem;
+    }*/
+.newGameLink {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: #017323;
+    background-color: #232323;
+}
+    .newGameLink:hover {
+        color: #10ff41;
+        background-color: #131313;
+        transform: scale(1.05);
+        font-size: 1.1rem;
+        height:1.5rem;
+    }
+.adminHeaderAndButton a {
+    margin-top:1rem;
+    color: #017323;
+    background-color: #232323;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    font-size: 16px;
+    height: 2rem;
+    border-radius: 1rem;
+    border: 1px solid #017323;
+}

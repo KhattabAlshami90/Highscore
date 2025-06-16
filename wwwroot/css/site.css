@@ -1,0 +1,284 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #393939;
+}
+
+.mainHeader {
+    height: 150px;
+    background-image: url(../img/headerBg.png);
+    background-size: 100%100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 1px 1px 1px 1px #0ac43c;
+    margin-bottom: 3rem;
+}
+.loginImg {
+    width: 25px;
+    height: 25px;
+    margin-right:.3rem;
+
+}
+.logUl {
+    transition: 2s all ease;
+    opacity: 1;
+    animation: log 1s;
+}
+.headerLink:hover {
+    transform: scale(1.05);
+    border: solid #0ac43c 1px;
+    border-radius: 1rem;
+    background-color: #232323;
+    animation: headLink infinite alternate .6s;
+}
+@keyframes headLink{
+    from {
+        background-color: #232323;
+    }
+    to{
+        background-color:black;
+    }
+}
+
+
+@keyframes log {
+    from {
+        transform: translateY(-20rem)
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+.highScoreCardsContainer{
+    width:100%;
+
+}
+.highScoreCard {
+    width: 100%;
+    border: solid 2px #017323;
+    background-color: #232323;
+    box-shadow: -2px 2px 4px 2px black;
+    padding: .3rem;
+    border-radius: 1rem;
+    padding-left: 1rem;
+    padding-right:1rem;
+    margin-top:1rem;
+
+}
+.highScoreCardTitle {
+    color: #017323;
+    transition:1s;
+}
+.highScoreCardTitle:hover {
+    animation:TitleLink .5s infinite alternate;
+}
+
+.highscoreCardText {
+    display: flex;
+    flex-direction: column;
+}
+.playerAndDate {
+    color: #0ac43c;
+    font-size: 1.3em;
+}
+
+@keyframes TitleLink {
+    from {
+        color: #0ac43c;
+    }
+    to {
+        color: #017323;
+    }
+}
+.cardScore {
+    color: #0ac43c;
+    font-size:2em;
+}
+.highScoreCard{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.detailsContainer{
+    width:100%;
+    padding:1.5rem;
+    background-color:#232323;
+    border-radius:1rem;
+    box-shadow:-3px 3px 3px 4px #017323;
+    display:flex;
+    justify-content:space-around;
+    gap:1rem;
+}
+.detailsText{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+    width:50%;
+}
+.detailsTitle {
+    color: #0ac43c;
+    font-family: 'Alkatra', cursive;
+}
+.detailsHeadInfo{
+    display:flex;
+    flex-direction:column;
+}
+.detailsYearAndGenre{
+    font-size:1.4em;
+    color:#017323;
+}
+.detailsDescription{
+    font-size:1.3em;
+    color:#0ac43c;
+}
+.detailsImg {
+    border-radius: 1rem;
+    box-shadow: -2px 2px 2px 3px #017323;
+}
+.hOne{
+    color:#017323;
+    font-family:'Baskerville Old Face';
+    text-shadow:-2px 3px 4px #000;
+    text-align:center;
+
+}
+.frmLbl{
+    color:#0ac43c;
+    font-size:1.5em;
+}
+.frmGrp{
+    display:flex;
+    flex-direction:column;
+    gap:.3rem;
+}
+.frmSelect {
+    width:40%;
+    background-color: #232323;
+    color: #0ac43c;
+    font-size: 16px;
+    border: 1px solid #017323;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.frmSelect:hover {
+    outline: none;
+    border-color: #0ac43c;
+    box-shadow: 0 0 5px #017323;
+}
+
+.frmInp {
+    width: 40%;
+    background-color: #232323;
+    color: #0ac43c;
+    font-size: 1.2em;
+    border: 1px solid #017323;
+    padding: 5px;
+    border-radius: 5px;
+}
+ .frmInp:hover {
+        outline: none;
+        border-color: #0ac43c;
+        box-shadow: 0 0 5px #017323;
+    }
+ .frmInp:focus {
+        outline:none;
+        border: 2px solid #017323;
+    }
+.logFrmInp {
+    background-color: #232323;
+    color: #0ac43c;
+    font-size: 16px;
+    border: 1px solid #017323;
+    border-bottom: 3px solid #017323;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+    .logFrmInp:hover {
+        outline: none;
+        border-color: #0ac43c;
+        box-shadow: 0 0 5px #017323;
+    }
+
+    .logFrmInp:focus {
+        outline: none;
+        border: 2px solid #017323;
+    }
+.primaryBtn {
+    border-radius: 1rem;
+    width: 30%;
+    margin-left: .5rem;
+    transition: 1s;
+    font-size: 1.05rem;
+    display: inline-block;
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #232323;
+    color: #017323;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+
+    .primaryBtn:hover {
+        color: #10ff41;
+        background-color: #131313;
+        transform: scale(1.05);
+        font-size: 1.1rem;
+    }
+.logPrimaryBtn {
+    border-radius: 1rem;
+    width: 50%;
+    margin-left: .5rem;
+    transition: 1s;
+    font-size: 1.05rem;
+    display: inline-block;
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #232323;
+    color: #017323;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+    .logPrimaryBtn:hover {
+        color: #10ff41;
+        background-color: #131313;
+        transform: scale(1.05);
+        font-size: 1.1rem;
+    }
+.logLink {
+    color: #0ac43c;
+    font-size: 1.2em;
+    text-decoration: none;
+    text-shadow: -2px 3px 4px #000;
+}
+.logLink:hover{
+    color:#017323;
+}
+.LeaderboardContainer{
+    width:90%;
+}

@@ -1,0 +1,38 @@
+﻿<div class="newGameContainer">
+    <h1 class="headTitle">
+        Nytt Spel
+    </h1>
+    <form method="post">
+        <div class="col-sm-6 frmGrp">
+            <label for="title" class="form-label frmLbl">Title</label>
+            <input type="text" class="frmInp" name="title" autocomplete="off" />
+        </div>
+        <div class="col-sm-6 frmGrp">
+            <label for="description" class="form-label frmLbl">Beskrivning</label>
+            <textarea type="text" class="frmTextArea" name="description" autocomplete="off" >
+            </textarea>
+        </div>
+        <div class="col-sm-6 frmGrp">
+            <label for="imageUrl" class="form-label frmLbl">Bild URL</label>
+            <input type="text" class="frmInp" name="imageUrl" autocomplete="off" />
+        </div>
+        <div class="col-sm-6 frmGrp">
+            <label for="genre" class="form-label frmLbl">Genre</label>
+            <select name="genre" id="game" class="frmSelect">
+                <option value="" disabled selected>Välj Genre</option>
+                <option value="Puzzle">Puzzle</option>
+                <option value="Shooter">Shooter</option>
+                <option value="Classical">Classical</option>
+            </select>
+        </div>
+        <div class="col-sm-6 frmGrp">
+            <label for="year" class="form-label frmLbl">År</label>
+            <input type="number" class="frmInp" name="year" />
+        </div>
+        <div class="col-sm-6 frmGrp">
+            <label for="urlSlug" class="form-label frmLbl">UrlSlug</label>
+            <input type="text" class="frmInp" name="urlSlug" />
+        </div>
+        <button class="primaryBtn" type="submit">Lägg till</button>
+    </form>
+</div>

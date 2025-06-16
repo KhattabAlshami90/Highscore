@@ -1,0 +1,25 @@
+﻿@model Highscore.Models.ViewModels.GameScoresModel
+<div class="detailsContainer">
+    <div class="detailsText">
+        <div class="detailsHeadInfo">
+            <h1 class="detailsTitle">
+                @Model.Game.Title
+            </h1>
+            <span class="detailsYearAndGenre">
+                <b>
+                    @Model.Game.Year, @Model.Game.Genre
+                </b>
+
+            </span>
+        </div>
+        <p class="detailsDescription">
+            @Model.Game.Description
+        </p>
+    </div>
+    <img src="@Model.Game.ImageUrl" class="detailsImg" />
+</div>
+
+<partial name="_Highscores" />
+
+
+

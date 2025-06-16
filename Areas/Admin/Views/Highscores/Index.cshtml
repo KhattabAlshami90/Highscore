@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Highscore.Models.GameHighScore>
+<h1 class="hOne">
+    Highscores
+</h1>
+<table class="adminGamesTable table table-striped" style="border:solid 2px #10ff41; font-size:1.4em; color:#10ff41; ">
+    <thead style="background-color:#232323;">
+        <tr>
+            <th>
+                Spel
+            </th>
+            <th>
+                Spelare
+            </th>
+            <th>
+                Datum
+            </th>
+            <th>
+                Poäang
+            </th>
+            <th>
+                .
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var higScore in Model)
+        {
+            <tr>
+                <td>@higScore.GameTitle</td>
+                <td>@higScore.Player</td>
+                <td>@higScore.Date.ToShortDateString()</td>
+                <td>@higScore.ScoreP</td>
+                <td class="text-center">
+                    @using (Html.BeginForm("Delete", "highscores", new { id = higScore.ScoreIden }, FormMethod.Post))
+                    {
+                        <button type="submit" class="primaryBtn" style="width:90%; margin-bottom:.3rem;">Radera</button>
+                    }
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
